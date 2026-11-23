@@ -77,6 +77,24 @@ footer{padding:40px 0 56px;border-top:1px solid var(--line);color:var(--muted);f
 .rep{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
 .rep div{border-left:4px solid var(--accent);padding:6px 12px;background:var(--bg);border-radius:4px;font-size:.93rem}
 .rep b{display:block;font-size:.76rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.feature{display:grid;grid-template-columns:130px 1fr;gap:30px;align-items:center}
+.feature svg{width:100%;height:auto}
+.feature h3{font-family:Georgia,serif;font-size:1.5rem;margin:0 0 6px}
+.feature .quote{font-style:italic;color:var(--muted);margin:0 0 12px;max-width:34em}
+.chip{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border:2px solid var(--accent);color:var(--accent);border-radius:99px;padding:2px 12px;margin-bottom:14px}
+.right-hand{max-width:38em;margin:22px 0 0;display:grid;gap:14px}
+.right-hand p{margin:0}
+.friction{margin:0;padding-left:1.2em;color:var(--muted)}
+.friction li{padding:2px 0}
+.flow{margin-top:30px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px}
+.flow svg{width:100%;height:auto;display:block}
+.flow .box{fill:var(--bg);stroke:var(--line);stroke-width:2}
+.flow .hub{fill:var(--accent)}
+.flow .ln{stroke:var(--muted);stroke-width:2;fill:none}
+.flow .t{fill:var(--ink);font:600 14px system-ui,sans-serif;text-anchor:middle}
+.flow .th{fill:var(--accent-ink);font:700 14px system-ui,sans-serif;text-anchor:middle}
+.q-ink{fill:var(--ink)}.q-acc{fill:var(--accent)}
+@media (max-width:640px){.feature{grid-template-columns:1fr}.feature svg{max-width:110px}}
 .note{color:var(--muted);font-size:.88rem;margin:14px 0 0}
 @media (max-width:640px){.week{grid-template-columns:1fr}nav a{margin:0 14px 0 0}}
 </style>
@@ -109,6 +127,25 @@ footer{padding:40px 0 56px;border-top:1px solid var(--line);color:var(--muted);f
 </div>
 </div></section>
 
+<section id="approach"><div class="wrap" style="padding:0">
+<h2>How I work</h2>
+<div class="feature">
+<svg viewBox="0 0 120 165" role="img" aria-label="Chess queen illustration"><circle class="q-acc" cx="18" cy="26" r="7"/><circle class="q-acc" cx="39" cy="16" r="7"/><circle class="q-acc" cx="60" cy="12" r="7"/><circle class="q-acc" cx="81" cy="16" r="7"/><circle class="q-acc" cx="102" cy="26" r="7"/><path class="q-ink" d="M18 38 L36 98 H84 L102 38 L82 68 L72 30 L60 66 L48 30 L38 68 Z"/><path class="q-ink" d="M36 98 C38 120 30 130 26 142 H94 C90 130 82 120 84 98 Z"/><rect class="q-ink" x="18" y="142" width="84" height="10" rx="5"/><rect class="q-acc" x="12" y="154" width="96" height="9" rx="4.5"/></svg>
+<div>
+<span class="chip">Best for: Strategic EA / Founder’s Right Hand</span>
+<h3>The strategist behind the scenes</h3>
+<p class="quote">Like the queen on a chessboard: anticipating moves, spotting risks, and helping the leader stay several steps ahead.</p>
+<p style="margin:0;max-width:34em">I help business owners run their businesses better. I can help you solve operational problems and be your second brain, the person behind the scenes who keeps the moving parts moving so you can focus on what matters most.</p>
+</div></div>
+<div class="right-hand">
+<p>I’m a founder’s trusted right hand, combining executive support, project coordination, and operational follow-through to turn priorities into execution. I act as a force multiplier, bringing structure to priorities, coordinating people and projects, and making sure important things move forward.</p>
+<p>I see my role as removing friction between a founder’s priorities and their execution, before the founder even notices it exists. That means:</p>
+<ul class="friction"><li>Anticipating needs instead of waiting for instructions</li><li>Identifying bottlenecks before they become problems</li><li>Following through without the founder having to chase me</li><li>Coordinating people and projects so priorities keep moving</li><li>Knowing when to handle something independently and when to escalate it</li></ul>
+<p><b>I’m not the person who does everything. I’m the person who makes important things happen with less friction.</b></p>
+</div>
+<div class="flow"><svg viewBox="0 0 520 240" role="img" aria-label="Diagram: founder priorities flow through coordination of people, projects and deadlines into execution"><line class="ln" x1="124" y1="100" x2="212" y2="100"/><line class="ln" x1="308" y1="100" x2="396" y2="100"/><line class="ln" x1="150" y1="200" x2="228" y2="140"/><line class="ln" x1="260" y1="200" x2="260" y2="148"/><line class="ln" x1="370" y1="200" x2="292" y2="140"/><rect class="box" x="10" y="72" width="114" height="56" rx="10"/><text class="t" x="67" y="105">Priorities</text><circle class="hub" cx="260" cy="100" r="48"/><text class="th" x="260" y="105">Coordination</text><rect class="box" x="396" y="72" width="114" height="56" rx="10"/><text class="t" x="453" y="105">Execution</text><rect class="box" x="90" y="188" width="120" height="40" rx="20"/><text class="t" x="150" y="213">People</text><rect class="box" x="200" y="196" width="120" height="40" rx="20"/><text class="t" x="260" y="221">Projects</text><rect class="box" x="310" y="188" width="120" height="40" rx="20"/><text class="t" x="370" y="213">Deadlines</text></svg></div>
+</div></section>
+
 <section id="services"><div class="wrap" style="padding:0">
 <h2>What I can help with</h2>
 <div class="grid">
@@ -116,6 +153,8 @@ footer{padding:40px 0 56px;border-top:1px solid var(--line);color:var(--muted);f
 <div class="card"><h3>Executive &amp; Founder Support</h3><p>Helping founders manage priorities, track commitments, coordinate follow-ups, and maintain visibility across ongoing work.</p></div>
 <div class="card"><h3>Workflow Management &amp; Process Improvement</h3><p>Building ClickUp workflows, documenting how work gets done in SOPs and checklists, and tidying recurring processes.</p></div>
 <div class="card"><h3>Corporate Process &amp; Financial Operations Support</h3><p>Corporate invoice processing and vendor account maintenance in SAP and Oracle, invoice processing in Xero, and QuickBooks Online training with a previous ProAdvisor certification.</p></div>
+<div class="card"><h3>Process Documentation &amp; SOPs</h3><p>Turning how work gets done into clear SOPs, checklists, and step-by-step guides that people can follow.</p></div>
+<div class="card"><h3>Reporting &amp; Operational Visibility</h3><p>Trackers and progress reports that show what is done, what is pending, and who owns the next step.</p></div>
 </div>
 </div></section>
 
