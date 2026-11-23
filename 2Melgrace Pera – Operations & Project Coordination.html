@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Melgrace Pera – Operations &amp; Project Coordination</title>
+<style>
+:root{--bg:#ffffff;--surface:#f6f6f6;--ink:#111111;--muted:#555555;--line:#dddddd;--accent:#c8102e;--accent-ink:#ffffff;--mark:#c8102e;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0c0c0c;--surface:#1a1a1a;--ink:#f5f5f5;--muted:#a8a8a8;--line:#333333;--accent:#ff4d5e;--accent-ink:#0c0c0c;--mark:#ff4d5e}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0c0c0c;--surface:#1a1a1a;--ink:#f5f5f5;--muted:#a8a8a8;--line:#333333;--accent:#ff4d5e;--accent-ink:#0c0c0c;--mark:#ff4d5e}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.15;margin:0}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--mark);outline-offset:2px}
+.wrap{max-width:880px;margin:0 auto;padding:0 22px}
+header.top{padding:22px 0;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font-family:Georgia,serif;font-weight:700;font-size:1.1rem}
+nav a{margin-left:18px;color:var(--muted);text-decoration:none;font-size:.95rem}
+nav a:hover{color:var(--ink)}
+.hero{padding:56px 0 64px}
+.hero h1{font-size:clamp(2.2rem,6.5vw,3.9rem);max-width:15em;letter-spacing:-.01em}
+.hero p{max-width:34em;color:var(--muted);font-size:1.15rem;margin:22px 0 14px}
+.hero p.areas{font-size:.95rem;font-weight:600;color:var(--ink);margin:0 0 30px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;text-decoration:none;font-weight:600;border:2px solid var(--accent)}
+.btn.main{background:var(--accent);color:var(--accent-ink)}
+.btn.alt{color:var(--accent)}
+.week{margin-top:46px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.week h3{font-size:1rem;font-family:system-ui,sans-serif;font-weight:700;margin-bottom:8px;padding-bottom:8px;border-bottom:3px solid var(--mark)}
+.week ul{margin:0;padding:0;list-style:none;color:var(--muted);font-size:.95rem}
+.week li{padding:3px 0}
+section{padding:46px 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:1.9rem;margin-bottom:22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.card h3{font-size:1.2rem;margin-bottom:8px}
+.card p{margin:0;color:var(--muted);font-size:.98rem}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:6px 14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.steps li:before{content:counter(s);font-family:Georgia,serif;font-size:1.6rem;color:var(--accent);grid-row:span 2}
+.steps b{font-size:1.05rem}
+.steps span{color:var(--muted)}
+.tl{margin:0;padding:0;list-style:none;border-left:3px solid var(--line)}
+.tl li{padding:0 0 26px 22px;position:relative}
+.tl li:before{content:"";position:absolute;left:-9px;top:7px;width:15px;height:15px;border-radius:50%;background:var(--mark);border:3px solid var(--bg)}
+.tl b{font-size:1.1rem}
+.tl .when{color:var(--muted);font-size:.9rem;display:block}
+.tl p{margin:6px 0 0;color:var(--muted);font-size:.98rem}
+.about{display:grid;gap:14px;max-width:38em}
+.about p{margin:0}
+footer{padding:40px 0 56px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+.cs-lead{max-width:38em;color:var(--muted);margin:0 0 22px}
+.cs-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:26px}
+.cs-cols h3{font-size:1.1rem;margin-bottom:8px}
+.cs-cols ul{margin:0;padding-left:1.1em;color:var(--muted);font-size:.98rem}
+.cs-cols li{padding:2px 0}
+.sample{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin-bottom:16px}
+.sample h4{margin:0 0 10px;font-size:1rem;font-family:system-ui,sans-serif}
+.sample .tag{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:1px 9px;margin-left:8px;vertical-align:middle}
+.scroll{overflow-x:auto}
+.sample table{width:100%;border-collapse:collapse;font-size:.93rem;min-width:480px}
+.sample th,.sample td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
+.sample th{color:var(--muted);font-weight:600}
+.pill{display:inline-block;padding:1px 10px;border-radius:99px;font-size:.82rem;font-weight:600;border:2px solid var(--line)}
+.pill.go{border-color:var(--accent);color:var(--accent)}
+.pill.hot{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.sample ul.chk{list-style:none;margin:0;padding:0;font-size:.95rem}
+.sample ul.chk li{padding:4px 0}
+.sample ul.chk li:before{content:"\2610  ";color:var(--accent)}
+.sample .tag{display:block;width:fit-content;margin:0 0 8px}
+.tl .when{margin:3px 0 6px}
+.bar{display:block;height:8px;min-width:90px;background:var(--line);border-radius:99px}
+.bar i{display:block;height:100%;background:var(--accent);border-radius:99px}
+.rep{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.rep div{border-left:4px solid var(--accent);padding:6px 12px;background:var(--bg);border-radius:4px;font-size:.93rem}
+.rep b{display:block;font-size:.76rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.feature{display:grid;grid-template-columns:130px 1fr;gap:30px;align-items:center}
+.feature svg{width:100%;height:auto}
+.feature h3{font-family:Georgia,serif;font-size:1.5rem;margin:0 0 6px}
+.feature .quote{font-style:italic;color:var(--muted);margin:0 0 12px;max-width:34em}
+.chip{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border:2px solid var(--accent);color:var(--accent);border-radius:99px;padding:2px 12px;margin-bottom:14px}
+.right-hand{max-width:38em;margin:22px 0 0;display:grid;gap:14px}
+.right-hand p{margin:0}
+.friction{margin:0;padding-left:1.2em;color:var(--muted)}
+.friction li{padding:2px 0}
+.flow{margin-top:30px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px}
+.flow svg{width:100%;height:auto;display:block}
+.flow .box{fill:var(--bg);stroke:var(--line);stroke-width:2}
+.flow .hub{fill:var(--accent)}
+.flow .ln{stroke:var(--muted);stroke-width:2;fill:none}
+.flow .t{fill:var(--ink);font:600 14px system-ui,sans-serif;text-anchor:middle}
+.flow .th{fill:var(--accent-ink);font:700 14px system-ui,sans-serif;text-anchor:middle}
+.q-ink{fill:var(--ink)}.q-acc{fill:var(--accent)}
+@media (max-width:640px){.feature{grid-template-columns:1fr}.feature svg{max-width:110px}}
+.note{color:var(--muted);font-size:.88rem;margin:14px 0 0}
+@media (max-width:640px){.week{grid-template-columns:1fr}nav a{margin:0 14px 0 0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<span class="brand">Melgrace Pera</span>
+<nav aria-label="Sections"><a href="#about">About</a><a href="#services">Services</a><a href="#case-study">Case study</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+</header>
+
+<main>
+<div class="hero">
+<h1>I keep projects moving and the people behind them organized.</h1>
+<p>Operations &amp; Project Coordination Professional supporting founders and growing teams through structured workflows, cross-functional coordination, and reliable operational execution.</p>
+<p class="areas">Project Operations · Workflow Management · Process Improvement · Executive &amp; Founder Support</p>
+<div class="btns"><a class="btn main" href="#contact">Get in touch</a><a class="btn alt" href="#experience">See my experience</a></div>
+<div class="week" aria-label="How I maintain project visibility">
+<div><h3>Prioritize</h3><ul><li>Organize tasks</li><li>Clarify ownership</li><li>Identify deadlines</li></ul></div>
+<div><h3>Monitor</h3><ul><li>Review progress</li><li>Follow up on pending items</li><li>Flag blockers</li></ul></div>
+<div><h3>Report</h3><ul><li>Provide updates</li><li>Review deliverables</li><li>Organize next steps</li></ul></div>
+</div>
+</div>
+
+<section id="about"><div class="wrap" style="padding:0">
+<h2>About</h2>
+<div class="about">
+<p>With a background in Accountancy and approximately five years of corporate experience in business process operations, I bring a structured, detail-oriented approach to managing work. My experience in remote marketing agency operations has expanded my skills in project coordination, workflow management, team communication, and process documentation.</p>
+<p>I’m comfortable working behind the scenes to organize moving parts, keep deliverables visible, and help business owners stay on top of their priorities.</p>
+</div>
+</div></section>
+
+<section id="approach"><div class="wrap" style="padding:0">
+<h2>How I work</h2>
+<div class="feature">
+<svg viewBox="0 0 120 165" role="img" aria-label="Chess queen illustration"><circle class="q-acc" cx="18" cy="26" r="7"/><circle class="q-acc" cx="39" cy="16" r="7"/><circle class="q-acc" cx="60" cy="12" r="7"/><circle class="q-acc" cx="81" cy="16" r="7"/><circle class="q-acc" cx="102" cy="26" r="7"/><path class="q-ink" d="M18 38 L36 98 H84 L102 38 L82 68 L72 30 L60 66 L48 30 L38 68 Z"/><path class="q-ink" d="M36 98 C38 120 30 130 26 142 H94 C90 130 82 120 84 98 Z"/><rect class="q-ink" x="18" y="142" width="84" height="10" rx="5"/><rect class="q-acc" x="12" y="154" width="96" height="9" rx="4.5"/></svg>
+<div>
+<span class="chip">Best for: Strategic EA / Founder’s Right Hand</span>
+<h3>The strategist behind the scenes</h3>
+<p class="quote">Like the queen on a chessboard: anticipating moves, spotting risks, and helping the leader stay several steps ahead.</p>
+<p style="margin:0;max-width:34em">I help business owners run their businesses better. I can help you solve operational problems and be your second brain, the person behind the scenes who keeps the moving parts moving so you can focus on what matters most.</p>
+</div></div>
+<div class="right-hand">
+<p>I’m a founder’s trusted right hand, combining executive support, project coordination, and operational follow-through to turn priorities into execution. I act as a force multiplier, bringing structure to priorities, coordinating people and projects, and making sure important things move forward.</p>
+<p>I see my role as removing friction between a founder’s priorities and their execution, before the founder even notices it exists. That means:</p>
+<ul class="friction"><li>Anticipating needs instead of waiting for instructions</li><li>Identifying bottlenecks before they become problems</li><li>Following through without the founder having to chase me</li><li>Coordinating people and projects so priorities keep moving</li><li>Knowing when to handle something independently and when to escalate it</li></ul>
+<p><b>I’m not the person who does everything. I’m the person who makes important things happen with less friction.</b></p>
+</div>
+<div class="flow"><svg viewBox="0 0 520 240" role="img" aria-label="Diagram: founder priorities flow through coordination of people, projects and deadlines into execution"><line class="ln" x1="124" y1="100" x2="212" y2="100"/><line class="ln" x1="308" y1="100" x2="396" y2="100"/><line class="ln" x1="150" y1="200" x2="228" y2="140"/><line class="ln" x1="260" y1="200" x2="260" y2="148"/><line class="ln" x1="370" y1="200" x2="292" y2="140"/><rect class="box" x="10" y="72" width="114" height="56" rx="10"/><text class="t" x="67" y="105">Priorities</text><circle class="hub" cx="260" cy="100" r="48"/><text class="th" x="260" y="105">Coordination</text><rect class="box" x="396" y="72" width="114" height="56" rx="10"/><text class="t" x="453" y="105">Execution</text><rect class="box" x="90" y="188" width="120" height="40" rx="20"/><text class="t" x="150" y="213">People</text><rect class="box" x="200" y="196" width="120" height="40" rx="20"/><text class="t" x="260" y="221">Projects</text><rect class="box" x="310" y="188" width="120" height="40" rx="20"/><text class="t" x="370" y="213">Deadlines</text></svg></div>
+</div></section>
+
+<section id="services"><div class="wrap" style="padding:0">
+<h2>What I can help with</h2>
+<div class="grid">
+<div class="card"><h3>Project &amp; Operations Coordination</h3><p>Task and deadline tracking, cross-functional team coordination, follow-ups, and clear progress updates.</p></div>
+<div class="card"><h3>Executive &amp; Founder Support</h3><p>Helping founders manage priorities, track commitments, coordinate follow-ups, and maintain visibility across ongoing work.</p></div>
+<div class="card"><h3>Workflow Management &amp; Process Improvement</h3><p>Building ClickUp workflows, documenting how work gets done in SOPs and checklists, and tidying recurring processes.</p></div>
+<div class="card"><h3>Corporate Process &amp; Financial Operations Support</h3><p>Corporate invoice processing and vendor account maintenance in SAP and Oracle, invoice processing in Xero, and QuickBooks Online training with a previous ProAdvisor certification.</p></div>
+<div class="card"><h3>Process Documentation &amp; SOPs</h3><p>Turning how work gets done into clear SOPs, checklists, and step-by-step guides that people can follow.</p></div>
+<div class="card"><h3>Reporting &amp; Operational Visibility</h3><p>Trackers and progress reports that show what is done, what is pending, and who owns the next step.</p></div>
+</div>
+</div></section>
+
+<section id="capabilities"><div class="wrap" style="padding:0">
+<h2>Selected operational capabilities</h2>
+<div class="sample"><div class="scroll"><table><thead><tr><th>Business problem</th><th>How I contribute</th></tr></thead><tbody>
+<tr><td>Many moving projects</td><td>Centralized project tracking and coordination</td></tr>
+<tr><td>Missed deadlines and pending tasks</td><td>Deadline monitoring and proactive follow-ups</td></tr>
+<tr><td>Disorganized team communication</td><td>Cross-functional coordination and progress reporting</td></tr>
+<tr><td>Undocumented, repetitive work</td><td>SOPs, checklists, and workflow documentation</td></tr>
+<tr><td>Little project visibility</td><td>Trackers, status reports, and organized task structures</td></tr>
+<tr><td>A founder buried in details</td><td>Executive and operational support</td></tr>
+</tbody></table></div></div>
+</div></section>
+
+<section id="case-study"><div class="wrap" style="padding:0">
+<h2>Case study: coordinating multiple projects and teams</h2>
+<p class="cs-lead">At a remote marketing agency, I supported the founder in coordinating multiple client projects and cross-functional teams. I used ClickUp to organize tasks, clarify responsibilities, track deadlines, monitor progress, and keep outstanding deliverables visible.</p>
+<div class="cs-cols">
+<div class="card"><h3>The challenge</h3><p>Multiple projects ran at once, with developers, marketers, closers, and appointment setters each owning different deliverables. Without an organized tracking and follow-up process, it was hard to see progress, spot outstanding tasks, and keep everyone aligned.</p></div>
+<div class="card"><h3>What I did</h3><ul><li>Built and maintained ClickUp task structures for projects, responsibilities, deadlines, and statuses</li><li>Used trackers, checklists, and progress reports to monitor deliverables and pending items</li><li>Followed up with team members on a consistent routine</li><li>Sent progress updates to the founder</li><li>Documented recurring processes as SOPs and step-by-step instructions</li></ul></div>
+<div class="card"><h3>The result</h3><ul><li>Clearer visibility into progress, pending deliverables, and who was responsible for what</li><li>A more organized way for the founder to monitor work without personally chasing every task</li><li>More structured coordination and more consistent progress tracking</li></ul></div>
+</div>
+
+<div class="card" style="margin-bottom:26px"><h3>Scope of coordination</h3><p>Multiple concurrent projects and cross-functional team members across <b>development</b>, <b>marketing</b>, <b>closing</b>, and <b>appointment setting</b>. This was project and workflow coordination, not direct people management.</p></div>
+<div class="card" style="margin-bottom:26px"><h3>My contribution to operational visibility</h3><ul style="margin:0;padding-left:1.1em;color:var(--muted)"><li>Progress on each project, and what was still pending</li><li>Who was responsible for which deliverable</li><li>Which items needed a follow-up</li><li>Regular updates so the founder could monitor work without chasing every task</li></ul></div>
+<h3 style="font-size:1.25rem;margin:10px 0 14px">Sample workflow materials</h3>
+<p class="cs-lead">These samples are recreated with fictional data to show how I set up and run this kind of work. They contain no client information.</p>
+
+<div class="sample"><h4>Project dashboard<span class="tag">Illustrative sample</span></h4>
+<div class="scroll"><table><thead><tr><th>Project</th><th>Owner role</th><th>Next deadline</th><th>Status</th><th>Progress</th></tr></thead><tbody>
+<tr><td>Sample Project A: website build</td><td>Developer</td><td>Fri</td><td><span class="pill go">In progress</span></td><td><span class="bar" aria-label="70% complete (sample)"><i style="width:70%"></i></span></td></tr>
+<tr><td>Sample Project B: ad campaign</td><td>Marketer</td><td>Wed</td><td><span class="pill hot">Needs follow-up</span></td><td><span class="bar" aria-label="45% complete (sample)"><i style="width:45%"></i></span></td></tr>
+<tr><td>Sample Project C: lead pipeline</td><td>Appointment setter</td><td>Mon</td><td><span class="pill">Not started</span></td><td><span class="bar" aria-label="5% complete (sample)"><i style="width:5%"></i></span></td></tr>
+<tr><td>Sample Project D: sales onboarding</td><td>Closer</td><td>Thu</td><td><span class="pill go">In review</span></td><td><span class="bar" aria-label="85% complete (sample)"><i style="width:85%"></i></span></td></tr>
+</tbody></table></div></div>
+
+<div class="sample"><h4>Team coordination tracker<span class="tag">Illustrative sample</span></h4>
+<div class="scroll"><table><thead><tr><th>Function</th><th>Current focus</th><th>Pending item</th><th>Follow-up</th></tr></thead><tbody>
+<tr><td>Development</td><td>Page revisions</td><td>Client feedback to apply</td><td>Mid-week check-in</td></tr>
+<tr><td>Marketing</td><td>Campaign assets</td><td>Final copy approval</td><td>Daily until approved</td></tr>
+<tr><td>Closing</td><td>Warm leads</td><td>Call notes to log</td><td>Friday review</td></tr>
+<tr><td>Appointment setting</td><td>Booking calls</td><td>Updated lead list</td><td>Monday check-in</td></tr>
+</tbody></table></div></div>
+
+<div class="sample"><h4>Weekly progress report<span class="tag">Illustrative sample</span></h4>
+<div class="rep"><div><b>Completed</b>Sample Project A homepage approved</div><div><b>In progress</b>Sample Project B ad creatives, due Wednesday</div><div><b>Blocked</b>Sample Project C waiting on an updated lead list</div><div><b>Next week</b>Kick off Sample Project D onboarding</div></div>
+</div>
+
+<div class="sample"><h4>SOP checklist: starting a new project<span class="tag">Illustrative sample</span></h4>
+<ul class="chk"><li>Create the project folder and list in ClickUp</li><li>Add tasks with an owner and due date for each</li><li>Set statuses and share the project with the team</li><li>Schedule the first follow-up</li><li>Add the project to the weekly status report</li></ul></div>
+</div></section>
+
+<section id="experience"><div class="wrap" style="padding:0">
+<h2>Experience and education</h2>
+<ul class="tl">
+<li><b>Project Manager, More Leads More Conversions</b><span class="when">July 2022 to present · Full-time, remote</span><p>Coordinate project execution and cross-functional workflows, maintain ClickUp task structures, monitor deadlines and deliverables, follow up with team members, prepare progress updates, and support the founder in keeping projects on track.</p></li>
+<li><b>Business Process Delivery Analyst, Accenture</b><span class="when">July 2018 to December 2022</span><p>Validated and processed invoices, prepared reports, maintained vendor accounts, handled client emails and inquiries, and trained new team members.</p></li>
+<li><b>Accounting Assistant, MM &amp; Co</b><span class="when">January to June 2017</span><p>Processed invoices in Xero, handled emails, and supported administrative tasks.</p></li>
+<li><b>Service Crew, Jollibee</b><span class="when">2015 to 2016</span><p>Customer service in a fast-paced setting, where I learned to stay calm under pressure.</p></li>
+</ul>
+<h3 style="font-size:1.25rem;margin:10px 0 14px">Education and certificates</h3>
+<div class="grid">
+<div class="card"><h3>BS Accounting</h3><p>City College of Calamba, 2012 to 2017</p></div>
+<div class="card"><h3>QuickBooks Online ProAdvisor</h3><p>Previously certified by Intuit</p></div>
+<div class="card"><h3>Graphic Design Master Class</h3><p>Completion certificate, May 2022</p></div>
+<div class="card"><h3>Virtual Assistant course</h3><p>Completion certificate, July 2021 · Facebook Ads and social media management</p></div>
+<div class="card"><h3>Tools and technologies</h3><p><b>Project and collaboration:</b> ClickUp, Slack, Discord<br><b>Productivity:</b> Google Workspace, MS Office<br><b>Marketing and payments:</b> GoHighLevel, EasyPayDirect, Stripe<br><b>Finance and ERP:</b> SAP, Oracle, Xero, QuickBooks</p></div>
+<div class="card"><h3>Additional capabilities</h3><p>Canva graphics and Facebook Ads and social media management training.</p></div>
+</div>
+</div></section>
+
+<section id="contact"><div class="wrap" style="padding:0">
+<h2>Let’s talk</h2>
+<p style="max-width:34em;color:var(--muted);margin:0 0 22px">Have a project that needs steady hands? Email me or send a message on LinkedIn and I’ll reply as soon as I can.</p>
+<div class="btns"><a class="btn main" href="mailto:melgracepera10@gmail.com">melgracepera10@gmail.com</a><a class="btn alt" href="https://www.linkedin.com/in/melgrace-pera/" target="_blank" rel="noopener">LinkedIn</a></div>
+</div></section>
+</main>
+
+<footer><div class="wrap" style="padding:0">© 2026 Melgrace Pera · Philippines · Working remotely</div></footer>
+</div>
+</body>
+</html>
